@@ -18,14 +18,14 @@ class ServerThread(threading.Thread):
     def shutdown(self):
         self.srv.shutdown()
 
-def start_flask_thread(server_thread, app, host='0.0.0.0', port=5555, ngrok=False):
+def start_flask_thread(server_thread, app, host='0.0.0.0', port=5555, use_ngrok=False):
     if server_thread:
         print(" * Stopping current thread")
         server_thread.shutdown()
 
     # running fist time, so we should start ngrok
     # TODO: check on what port we have running ngrok's
-    if server_thread is None and ngrok:
+    if server_thread is None and use_ngrok:
             ngrok_address = _run_ngrok(port)
             print(f" * Running on {ngrok_address}")
 

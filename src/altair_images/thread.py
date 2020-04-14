@@ -1,5 +1,8 @@
-from flask_ngrok import _run_ngrok
 import threading
+
+from werkzeug.serving import make_server
+from flask_ngrok import _run_ngrok
+
 
 class ServerThread(threading.Thread):
 
@@ -28,6 +31,6 @@ def start_flask_thread(server_thread, app, host='0.0.0.0', port=5555, ngrok=Fals
 
     server_thread = ServerThread(app, host=host, port=port)
     server_thread.start()
-    print(f" * Started a server thread on {host}:{port}")
+    print(f" * Started a server thread on http://{host}:{port}")
 
     return server_thread

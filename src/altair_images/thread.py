@@ -29,7 +29,11 @@ class ServerThread(threading.Thread):
     def shutdown(self):
         self.srv.shutdown()
 
+
 def start_flask_thread(app, host='0.0.0.0', port=5555, use_ngrok=False):
+    """
+        Start Flask app in a separate thread.
+    """
 
     # running fist time, so we should start ngrok
     # TODO: check on what port we have running ngrok's

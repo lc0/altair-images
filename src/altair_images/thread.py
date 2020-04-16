@@ -1,7 +1,7 @@
 import threading
 
 from werkzeug.serving import make_server
-from flask_ngrok import _run_ngrok
+from altair_images.proxy import start_ngrok
 
 
 class ServerThread(threading.Thread):
@@ -36,10 +36,9 @@ def start_flask_thread(app, host='0.0.0.0', port=5555, use_ngrok=False):
     """
 
     # running fist time, so we should start ngrok
-    # TODO: check on what port we have running ngrok's
     if use_ngrok:
-            ngrok_address = _run_ngrok(port)
-            print(f" * Running on {ngrok_address}")
+        ngrok_address = start_ngrok(port)
+        print(f" * Running on {ngrok_address}")
 
     server_thread = ServerThread(app, host=host, port=port)
     server_thread.start()

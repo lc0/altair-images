@@ -9,15 +9,19 @@ from altair_images.proxy import start_ngrok
 
 # TODO: add tearing down after us
 def serve_images(sample_images, image_transform_func, host='127.0.0.1', port=5555, use_ngrok=False, to_rgb=True, server_thread=None):
-    """Just serve images out of the box"""
+    """
+    Just serve images out of the box
+    """
 
     app = _create_flask_app(sample_images, image_transform_func, to_rgb=to_rgb)
     start_flask_thread(app, host=host, port=port, use_ngrok=False)
 
-    if use_ngrok:
-        start_ngrok(port)
+    serving_url = f"http://{host}:{port}"
 
-    return f"http://{host}:{port}"
+    if use_ngrok:
+        serving_url = start_ngrok(port)
+
+    return serving_url
 
 
 # TODO: beatiful version with just dataframe

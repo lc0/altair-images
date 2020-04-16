@@ -8,7 +8,7 @@ with open('requirements.txt') as f:
 
 setup(
     name="altair-images",
-    version="0.0.5",
+    version="0.0.8",
     author="Sergii Khomenko",
     description="Serving interactive charts with images",
     long_description=long_description,
@@ -17,6 +17,8 @@ setup(
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Programming Language :: Python :: 3.7",
+        "Intended Audience :: Developers",
+        "Intended Audience :: Education",
         "License :: OSI Approved :: Apache Software License",
         "Operating System :: OS Independent",
     ],

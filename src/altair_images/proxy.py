@@ -1,8 +1,6 @@
 # place where all proxies live
 
-# TODO: if I see people using a lib, would be reasonable to write own ngrok wrapper
-# For now, we just rely on private method from flask_ngrok
-from flask_ngrok import _run_ngrok
+from pyngrok import ngrok
 
 class Proxy():
     pool = {}
@@ -23,4 +21,6 @@ class Proxy():
 
 # TODO: add support of configs
 def start_ngrok(port):
-    return Proxy(port).get_host()
+    public_url = ngrok.connect(port, "http")
+
+    return public_url

@@ -1,6 +1,6 @@
 # Serving interactive charts with images - based on Altair
 
-Project fully supports Google Colab. For more details see [examples](examples)
+Project fully supports Google Colab. For more details see [examples](examples/example.ipynb)
 
 ## Installation
 ```sh

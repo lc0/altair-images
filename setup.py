@@ -8,14 +8,14 @@ with open('requirements.txt') as f:
 
 setup(
     name="altair-images",
-    version="0.0.9",
+    version="0.1.0",
     author="Sergii Khomenko",
     description="Serving interactive charts with images",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/lc0/altair_images",
     classifiers=[
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 4 - Beta ",
         "Programming Language :: Python :: 3.7",
         "Intended Audience :: Developers",
         "Intended Audience :: Education",

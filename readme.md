@@ -1,6 +1,6 @@
 # Serving interactive charts with images - based on Altair
 
-Project fully supports Google Colab. For more details see [examples](examples)
+Project fully supports Google Colab. For more details see [examples](examples/example.ipynb)
 
 ## Installation
 ```sh
@@ -24,5 +24,6 @@ plot_with_image(embedding_data, labels, sample_images)
 
 ## TODO
 - [ ] Add examples in readme
+- [ ] Add CI for tagging and publishing new version from master
 - [ ] Add tests
 - [ ]

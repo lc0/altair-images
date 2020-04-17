@@ -1,3 +1,4 @@
+import logging
 import threading
 
 from werkzeug.serving import make_server
@@ -11,7 +12,7 @@ class ServerThread(threading.Thread):
         threading.Thread.__init__(self)
 
         if port in self.pool:
-            print(" * Re-using server on the same port")
+            logging.info(" * Re-using server on the same port")
             self.srv = self.pool[port]
             self.srv.shutdown()
 
@@ -35,13 +36,14 @@ def start_flask_thread(app, host='0.0.0.0', port=5555, use_ngrok=False):
         Start Flask app in a separate thread.
     """
 
+    serving_url = f"http://{host}:{port}"
     # running fist time, so we should start ngrok
     if use_ngrok:
-        ngrok_address = start_ngrok(port)
-        print(f" * Running on {ngrok_address}")
+        serving_url = start_ngrok(port)
+        logging.info(f" * Running on {serving_url}")
 
     server_thread = ServerThread(app, host=host, port=port)
     server_thread.start()
-    print(f" * Started a server thread on http://{host}:{port}")
+    logging.info(f" * Started a server thread on {serving_url}")
 
-    return server_thread, f"http://{host}:{port}"
+    return server_thread, serving_url

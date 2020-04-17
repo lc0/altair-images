@@ -14,18 +14,12 @@ def serve_images(sample_images, image_transform_func, host='127.0.0.1', port=555
     """
 
     app = _create_flask_app(sample_images, image_transform_func, to_rgb=to_rgb)
-    start_flask_thread(app, host=host, port=port, use_ngrok=False)
-
-    serving_url = f"http://{host}:{port}"
-
-    if use_ngrok:
-        serving_url = start_ngrok(port)
+    _, serving_url = start_flask_thread(app, host=host, port=port, use_ngrok=use_ngrok)
 
     return serving_url
 
 
-# TODO: beatiful version with just dataframe
-# plot_with_image(dataframe, columns, use_ngrok=False):
+# TODO: beatiful version with just dataframe - plot_with_image(dataframe, columns, use_ngrok=False):
 def plot_with_image(data, labels, sample_images, columns={}, use_ngrok=False):
     """
     Build a entire graph and simple return it

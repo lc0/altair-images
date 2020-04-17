@@ -24,5 +24,6 @@ plot_with_image(embedding_data, labels, sample_images)
 
 ## TODO
 - [ ] Add examples in readme
+- [ ] Add CI for tagging and publishing new version from master
 - [ ] Add tests
 - [ ]

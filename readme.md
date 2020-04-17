@@ -1,6 +1,7 @@
 # Serving interactive charts with images - based on Altair
+[![PyPI version](https://badge.fury.io/py/altair-images.svg)](https://badge.fury.io/py/altair-images)
 
-Project fully supports Google Colab. For more details see [examples](examples/example.ipynb)
+Project fully supports Google Colab. For more details see [examples](examples/examples.ipynb)
 
 ## Installation
 ```sh
@@ -23,7 +24,6 @@ plot_with_image(embedding_data, labels, sample_images)
 ![Fashion MNIST embeddings](altair-images.gif)
 
 ## TODO
-- [ ] Add examples in readme
+- [x] Add examples in readme
 - [ ] Add CI for tagging and publishing new version from master
 - [ ] Add tests
-- [ ]

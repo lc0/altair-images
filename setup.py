@@ -8,7 +8,7 @@ with open('requirements.txt') as f:
 
 setup(
     name="altair-images",
-    version="0.1.1",
+    version="0.1.2",
     author="Sergii Khomenko",
     description="Serving interactive charts with images",
     long_description=long_description,
@@ -19,7 +19,7 @@ setup(
         "Programming Language :: Python :: 3.7",
         "Intended Audience :: Developers",
         "Intended Audience :: Education",
-        "License :: OSI Approved :: Apache Software License",
+        "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
     keywords='altair flask colab ngrok demo',

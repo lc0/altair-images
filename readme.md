@@ -21,9 +21,10 @@ labels = np.load('../tests/sample_labels_100.npy')
 plot_with_image(embedding_data, labels, sample_images)
 ```
 
-![Fashion MNIST embeddings](altair-images.gif)
+![Fashion MNIST embeddings](https://raw.githubusercontent.com/lc0/altair-images/master/altair-images.gif)
 
 ## TODO
 - [x] Add examples in readme
 - [ ] Add CI for tagging and publishing new version from master
 - [ ] Add tests
+- [ ] Example of line_plot and pictures(speed and frame, weight and body)

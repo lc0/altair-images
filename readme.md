@@ -1,5 +1,5 @@
 # Serving interactive charts with images - based on Altair
-[![PyPI version](https://badge.fury.io/py/altair-images.svg)](https://badge.fury.io/py/altair-images)
+[![PyPI version](https://badge.fury.io/py/altair-images.svg)](https://pypi.org/project/altair-images/)
 
 Project fully supports Google Colab. For more details see [examples](examples/examples.ipynb)
 
@@ -25,6 +25,6 @@ plot_with_image(embedding_data, labels, sample_images)
 
 ## TODO
 - [x] Add examples in readme
-- [ ] Add CI for tagging and publishing new version from master
+- [x] Add CI for tagging and publishing new version from master
 - [ ] Add tests
 - [ ] Example of line_plot and pictures(speed and frame, weight and body)

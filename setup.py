@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-with open("README.md", "r") as f:
+with open("readme.md", "r") as f:
     long_description = f.read()
 
 with open('requirements.txt') as f:
@@ -8,7 +8,7 @@ with open('requirements.txt') as f:
 
 setup(
     name="altair-images",
-    version="0.1.2",
+    version="0.1.4",
     author="Sergii Khomenko",
     description="Serving interactive charts with images",
     long_description=long_description,

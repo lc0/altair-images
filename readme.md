@@ -1,5 +1,6 @@
 # Serving interactive charts with images - based on Altair
 [![PyPI version](https://badge.fury.io/py/altair-images.svg)](https://pypi.org/project/altair-images/)
+[![Downloads](https://pepy.tech/badge/altair-images)](https://pepy.tech/project/altair-images)
 
 Project fully supports Google Colab. For more details see [examples](examples/examples.ipynb)
 

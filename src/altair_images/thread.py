@@ -22,8 +22,6 @@ class ServerThread(threading.Thread):
 
         self.pool[port] = self.srv
 
-
-
     def run(self):
         self.srv.serve_forever()
 

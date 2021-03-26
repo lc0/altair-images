@@ -3,14 +3,15 @@ import logging
 
 from pyngrok import ngrok
 
-class Proxy():
+
+class Proxy:
     pool = {}
 
     def __init__(self, port):
 
         if port in self.pool:
             logging.info(" * Re-using ngrok on the same port")
-            self.public_url  = self.pool[port]
+            self.public_url = self.pool[port]
         else:
             logging.info(" * Starting a new instance of ngrok")
             self.public_url = ngrok.connect(port, "http")
